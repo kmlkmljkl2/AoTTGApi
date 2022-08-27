@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ETC\**" />
+    <Content Remove="ETC\**" />
+    <EmbeddedResource Remove="ETC\**" />
+    <None Remove="ETC\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="ETC\AottgBotLib-main\Aottg.Bot.Lib\AottgBotLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Photon-NetStandard">
+      <HintPath>ETC\AottgBotLib-main\Dependencies\Photon-NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonRealtime-NetStandard">
+      <HintPath>ETC\AottgBotLib-main\Dependencies\PhotonRealtime-NetStandard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  
+</Project>
